@@ -11,7 +11,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 //  Dependencies
 // ================================================
-var pid = process && process.pid ? process.pid.toString(36) : '' ;
+var pid = typeof process !== 'undefined' && typeof process.pid !== 'undefined' ? process.pid.toString(36) : '' ;
 var mac = typeof __webpack_require__ !== 'function' ? require('macaddress').one(macHandler) : null ;
 var address = mac ? parseInt(mac.replace(/\:|\D+/gi, '')).toString(36) : '' ;
 
